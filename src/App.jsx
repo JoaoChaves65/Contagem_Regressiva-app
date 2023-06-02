@@ -8,7 +8,7 @@ import useCountdown from './hooks/useCountdown';
 import './App.css';
 
 function App() {
-  const x = useCountdown("Jan 1, 2023 00:00:00")
+  const [day, hour, minute, second] = useCountdown("Jun 6, 2023 00:00:00")
   
   return (
 
@@ -16,10 +16,10 @@ function App() {
       <div className="container">
         <Title title="Contagem regressiva para 2023"/>
         <div className="countdown-container">
-          <Counter title="Dias" number={2}/>
-          <Counter title="Horas" number={2}/>
-          <Counter title="Minutos" number={2}/>
-          <Counter title="Segundo" number={2}/>
+          <Counter title="Dias" number={day}/>
+          <Counter title="Horas" number={hour}/>
+          <Counter title="Minutos" number={minute}/>
+          <Counter title="Segundo" number={second}/>
         </div>
       </div>
     </div>
