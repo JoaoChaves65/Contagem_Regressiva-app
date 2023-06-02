@@ -17,13 +17,13 @@ function App() {
         <Title title="Contagem regressiva para 2023"/>
         <div className="countdown-container">
           <Counter title="Dias" number={day}/>
-          <Counter title="Horas" number={hour}/>
-          <Counter title="Minutos" number={minute}/>
-          <Counter title="Segundo" number={second}/>
+          <Counter title="Horas" number={hour > 9 ? hour : '0' + hour}/>
+          <Counter title="Minutos" number={minute > 9 ? minute : '0' + minute}/>
+          <Counter title="Segundo" number={second > 9 ? second : '0' + second}/>
         </div>
       </div>
     </div>
   )
-};
+};git 
 
 export default App;
